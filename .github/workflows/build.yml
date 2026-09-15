@@ -3,9 +3,13 @@ name: Build Prononce for Windows
 on:
   push:
     branches: [ main, master ]
+    tags: [ 'v*' ]
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -37,8 +41,23 @@ jobs:
             -p:IncludeNativeLibrariesForSelfExtract=true `
             -p:EnableCompressionInSingleFile=true
 
+      - name: Package Release ZIP
+        run: |
+          Compress-Archive -Path dist/Prononce.exe -DestinationPath dist/Prononce-Windows-x64.zip
+
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Prononce-Windows-x64
           path: dist/Prononce.exe
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/Prononce-Windows-x64.zip
+            dist/Prononce.exe
+          draft: false
+          prerelease: false
+          generate_release_notes: true
