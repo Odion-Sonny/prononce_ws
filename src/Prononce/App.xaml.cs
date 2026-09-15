@@ -1,4 +1,5 @@
 using System.Windows;
+using Application = System.Windows.Application;
 using Prononce.Models;
 using Prononce.Native;
 using Prononce.Services;

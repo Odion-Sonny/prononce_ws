@@ -27,6 +27,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Prevent System.Windows.Forms from colliding with System.Windows in WPF files -->
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\app.ico" />
     <Content Include="Resources\dictionary.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
