@@ -25,13 +25,13 @@ public partial class WelcomeWindow : Window
         {
             var voice = SpeechService.Shared.CurrentVoiceInfo;
             VoiceStatusText.Text = $"Ready • Using {voice?.Name ?? "French voice"}";
-            VoiceStatusText.Foreground = new SolidColorBrush(Color.FromRgb(52, 211, 153)); // Emerald green
+            VoiceStatusText.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(52, 211, 153)); // Emerald green
             InstallVoiceBtn.Visibility = Visibility.Collapsed;
         }
         else
         {
             VoiceStatusText.Text = "No French voice detected on this PC";
-            VoiceStatusText.Foreground = new SolidColorBrush(Color.FromRgb(248, 113, 113)); // Soft red
+            VoiceStatusText.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(248, 113, 113)); // Soft red
             InstallVoiceBtn.Visibility = Visibility.Visible;
         }
     }

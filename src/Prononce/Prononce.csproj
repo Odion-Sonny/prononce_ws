@@ -27,8 +27,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Prevent System.Windows.Forms from colliding with System.Windows in WPF files -->
+    <!-- Prevent Windows Forms and System.Drawing from colliding with WPF namespaces -->
     <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
   </ItemGroup>
 
   <ItemGroup>
