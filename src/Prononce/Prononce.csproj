@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>Prononce</RootNamespace>
+    <AssemblyName>Prononce</AssemblyName>
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
+    <StartupObject>Prononce.App</StartupObject>
+
+    <!-- Assembly metadata -->
+    <Version>1.0.0</Version>
+    <AssemblyTitle>Prononce</AssemblyTitle>
+    <Product>Prononce for Windows</Product>
+    <Description>Instant, lightweight native French pronunciation utility for learners</Description>
+    <Copyright>Copyright © 2026</Copyright>
+
+    <!-- Single file deployment optimizations -->
+    <PublishSingleFile Condition="'$(Configuration)' == 'Release'">true</PublishSingleFile>
+    <SelfContained Condition="'$(Configuration)' == 'Release'">false</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\app.ico" />
+    <Content Include="Resources\dictionary.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
