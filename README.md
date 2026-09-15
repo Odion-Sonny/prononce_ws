@@ -1,5 +1,11 @@
 # 🇫🇷 Prononce for Windows
 
+[![Build Status](https://github.com/Odion-Sonny/prononce_ws/actions/workflows/build.yml/badge.svg)](https://github.com/Odion-Sonny/prononce_ws/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?logo=windows&logoColor=white)](README.md)
+[![.NET 8.0](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/download/dotnet/8.0)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Offline-success)](SECURITY.md)
+
 > **Instant, lightweight native Windows French pronunciation utility for learners.**
 
 Highlight French text anywhere on Windows, press **`Ctrl + Shift + F`**, and immediately hear native French pronunciation powered by the built-in Windows speech engine.
@@ -139,6 +145,15 @@ prononce_ws/
 
 ---
 
+## Contributing
+
+Contributions, bug reports, and feature requests are very welcome!
+- Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) for build instructions and guidelines.
+- Review [`SECURITY.md`](SECURITY.md) for our privacy guarantees.
+
+---
+
 ## License
 
-MIT License. Designed with visual elegance and engineering discipline for Windows.
+This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
+Designed with visual elegance and engineering discipline for Windows.
